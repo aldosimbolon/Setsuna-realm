@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aldo — Portofolio Machine Learning & Pemodelan Komputasi</title>
+  <meta name="description" content="Portofolio Aldo, mahasiswa Ilmu Komputer UNIMED. Berfokus pada Machine Learning, Computer Vision, dan Pemodelan Stokastik Time Series.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Quiet Top Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#hero" class="brand-identity">
+        <span class="brand-title">Aldo Simbolon</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navigasi Utama">
+        <ul class="nav-links">
+          <li><a href="#projects" data-i18n="nav.projects">Proyek ML</a></li>
+          <li><a href="#engineering" data-i18n="nav.engineering">Engineering</a></li>
+          <li><a href="#skills" data-i18n="nav.skills">Keahlian</a></li>
+          <li><a href="#about" data-i18n="nav.about">Tentang</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <!-- Language Switcher -->
+        <button id="lang-toggle" class="control-btn" type="button" aria-label="Ganti bahasa / Switch language">
+          <span class="lang-indicator" id="lang-text">ID / EN</span>
+        </button>
+
+        <!-- Theme Switcher -->
+        <button id="theme-toggle" class="control-btn" type="button" aria-label="Ganti tema / Switch theme">
+          <svg class="theme-icon sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+          <svg class="theme-icon moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn-primary" data-i18n="nav.contactMe">Hubungi Saya</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section (Calm, Asymmetric, Real Material) -->
+    <section id="hero" class="hero-section">
+      <div class="section-container hero-layout">
+        <div class="hero-content">
+          <div class="origin-badge">
+            <span class="geo-dot"></span>
+            <span class="geo-label" data-i18n="hero.origin">Computer Science Undergraduate UNIMED</span>
+            <span class="geo-coords">2.5889° N, 98.7186° E</span>
+          </div>
+
+          <h1 class="hero-headline" data-i18n="hero.headline">
+            Machine Learning, Visi Komputer, dan Simulasi Stokastik
+          </h1>
+
+          <p class="hero-subhead" data-i18n="hero.subhead">
+            Saya Aldo, mahasiswa Ilmu Komputer Universitas Negeri Medan. Berfokus pada pemodelan berbasis data, ekstraksi fitur citra, dan peramalan runtun waktu dengan validasi ketat.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary" data-i18n="hero.exploreML">Eksplorasi Proyek ML</a>
+            <a href="https://github.com/aldosimbolon" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <span class="metric-label" data-i18n="hero.metric1Label">Institusi & Kelas</span>
+              <span class="metric-value">UNIMED</span>
+              <span class="metric-sub" data-i18n="hero.metric1Sub">Ilmu Komputer, Angkatan 2024</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label" data-i18n="hero.metric2Label">Fokus Utama</span>
+              <span class="metric-value">ML & Time Series</span>
+              <span class="metric-sub" data-i18n="hero.metric2Sub">Monte Carlo, CV, LCG</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label" data-i18n="hero.metric3Label">Pendekatan</span>
+              <span class="metric-value">Langsung & To the Point</span>
+              <span class="metric-sub" data-i18n="hero.metric3Sub">Empiris, Teruji, Bersih</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Side Panel: Live Stochastic Generator & RGB Matrix Terminal Preview -->
+        <div class="hero-preview-card" aria-label="Cuplikan Kode dan Formula">
+          <div class="card-header">
+            <div class="window-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="card-title-mono">aldo@lab-setsuna:~/ml-core</div>
+            <span class="status-indicator">Online</span>
+          </div>
+
+          <div class="terminal-body">
+            <div class="term-line prompt">
+              <span class="term-dim">$</span> python -m ml_toolkit --inspect
+            </div>
+            <div class="term-line success">
+              [OK] Memuat modul: computer_vision.rgb_extractor
+            </div>
+            <div class="term-line success">
+              [OK] Memuat modul: stochastic.monte_carlo_lcg
+            </div>
+            <div class="term-line info">
+              [INFO] Parameter LCG: a=1664525, c=1013904223, m=2^32
+            </div>
+            <div class="term-line info">
+              [INFO] Target: Bandara Kualanamu (KNO) 2026 Forecast
+            </div>
+            <div class="term-divider"></div>
+            <div class="terminal-matrix">
+              <div class="matrix-head" data-i18n="hero.liveMatrixTitle">Tensor Nilai RGB Piksel [Kanal R-G-B]:</div>
+              <div class="matrix-grid">
+                <span>[214, 153, 102]</span>
+                <span>[188, 134,  89]</span>
+                <span>[225, 170, 118]</span>
+                <span>[176, 120,  78]</span>
+                <span>[230, 185, 132]</span>
+                <span>[192, 140,  95]</span>
+              </div>
+            </div>
+            <div class="terminal-stat-row">
+              <div class="stat-pill">
+                <span class="pill-label">CV MAPE</span>
+                <span class="pill-val">4.18%</span>
+              </div>
+              <div class="stat-pill">
+                <span class="pill-label">Bandwidth P5-P95</span>
+                <span class="pill-val">±12,450 pax</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Machine Learning Projects Section -->
+    <section id="projects" class="section-container">
+      <div class="section-intro">
+        <div class="section-tag" data-i18n="projects.tag">Riset & Proyek Utama</div>
+        <h2 class="section-title" data-i18n="projects.title">Machine Learning & Computer Vision</h2>
+        <p class="section-desc" data-i18n="projects.desc">
+          Dua proyek laboratorium utama dengan metodologi teruji, implementasi algoritma mandiri, dan visualisasi interaktif.
+        </p>
+      </div>
+
+      <!-- Project 1: Kualanamu Monte Carlo Time Series Forecasting -->
+      <article class="project-card featured-project" id="project-kualanamu">
+        <div class="project-header">
+          <div class="project-meta">
+            <span class="project-category" data-i18n="kno.badge">Pemodelan & Simulasi</span>
+          <h3 class="project-title" data-i18n="kno.title">
+            Prediksi & Cross-Validation Penumpang Internasional Bandara Kualanamu Tahun 2026 Menggunakan LCG dan Simulasi Monte Carlo
+          </h3>
+          <p class="project-summary" data-i18n="kno.summary">
+            Peramalan deret waktu untuk total penumpang internasional (kedatangan, keberangkatan, transit) di Bandara Kualanamu tahun 2026 menggunakan data bulanan 2024–2025. Menggabungkan dekomposisi tren-musiman pada skala logaritmik dan residual bootstrap Monte Carlo dengan generator Linear Congruential Generator (LCG) buatan sendiri.
+          </p>
+        </div>
+
+        <!-- Interactive Forecasting Simulator Moment -->
+        <div class="interactive-moment kno-simulator">
+          <div class="sim-toolbar">
+            <div class="sim-title-group">
+              <span class="sim-label" data-i18n="kno.simTitle">Simulasi Interaktif Monte Carlo Kualanamu</span>
+              <span class="sim-subtitle" data-i18n="kno.simSubtitle">Interval Prediksi P5 (Batas Bawah), P50 (Median), P95 (Batas Atas)</span>
+            </div>
+            <div class="sim-actions">
+              <div class="control-group">
+                <label for="sim-iterations" data-i18n="kno.simIterLabel">Iterasi Bootstrap:</label>
+                <select id="sim-iterations" class="sim-select">
+                  <option value="500">500 Iterasi</option>
+                  <option value="1000" selected>1.000 Iterasi</option>
+                  <option value="2500">2.500 Iterasi</option>
+                  <option value="5000">5.000 Iterasi</option>
+                </select>
+              </div>
+              <button id="run-mc-btn" class="btn-secondary btn-sm" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+                </svg>
+                <span data-i18n="kno.runBtn">Jalankan Ulang Simulasi LCG</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Chart Area -->
+          <div class="chart-container">
+            <canvas id="kno-chart" width="860" height="340" aria-label="Grafik Prediksi Penumpang Kualanamu 2026"></canvas>
+            <div id="chart-tooltip" class="chart-tooltip hidden"></div>
+          </div>
+
+          <div class="chart-legend">
+            <div class="legend-item">
+              <span class="legend-color historical"></span>
+              <span data-i18n="kno.legendHist">Data Aktual 2024–2025</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-color median"></span>
+              <span data-i18n="kno.legendP50">Median Prediksi 2026 (P50)</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-color interval"></span>
+              <span data-i18n="kno.legendBand">Interval Kepercayaan 90% (P5 – P95)</span>
+            </div>
+          </div>
+
+          <!-- Method and Formula Cards -->
+          <div class="kno-specs-grid">
+            <div class="spec-card">
+              <span class="spec-title" data-i18n="kno.spec1Title">Model Dekomposisi Tren-Musiman</span>
+              <p class="spec-text" data-i18n="kno.spec1Text">
+                Model regresi logaritmik menangkap efek multiplikatif musiman libur hari raya dan akhir tahun: <code class="mono-code">ln(Y_t) = β_0 + β_1·t + S(t) + ε_t</code>.
+              </p>
+            </div>
+            <div class="spec-card">
+              <span class="spec-title" data-i18n="kno.spec2Title">Generator LCG Buatan Sendiri</span>
+              <p class="spec-text" data-i18n="kno.spec2Text">
+                Bilangan acak pseudo-random stokastik dihasilkan menggunakan: <code class="mono-code">X_(n+1) = (a·X_n + c) mod m</code> dengan konstanta modulus Marsaglia untuk menjamin periode maksimal.
+              </p>
+            </div>
+            <div class="spec-card">
+              <span class="spec-title" data-i18n="kno.spec3Title">Rolling-Origin Cross-Validation</span>
+              <p class="spec-text" data-i18n="kno.spec3Text">
+                Validasi dievaluasi pada berbagai horizon waktu tanpa data leakage untuk mengukur keandalan dan metrik MAPE/RMSE secara konsisten.
+              </p>
+            </div>
+            <div class="spec-card">
+              <span class="spec-title" data-i18n="kno.spec4Title">Artefak Ilmiah</span>
+              <p class="spec-text" data-i18n="kno.spec4Text">
+                Dokumentasi terstruktur dalam format paper jurnal akademik: <code class="mono-code">Paper.docx</code>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-footer">
+          <div class="tag-list">
+            <span class="tag">Time Series Forecasting</span>
+            <span class="tag">Monte Carlo Simulation</span>
+            <span class="tag">LCG Generator</span>
+            <span class="tag">Rolling-Origin CV</span>
+            <span class="tag">Scientific Paper</span>
+            <span class="tag">Python</span>
+          </div>
+          <button class="btn-secondary btn-sm" id="open-kno-modal" type="button" data-i18n="kno.viewDetails">
+            Detail Metodologi & Paper
+          </button>
+        </div>
+      </article>
+
+      <!-- Project 2: Interactive RGB Extraction Tool -->
+      <article class="project-card featured-project" id="project-rgb">
+        <div class="project-header">
+          <div class="project-meta">
+            <span class="project-category" data-i18n="rgb.badge">Machine Learning & Computer Vision</span>
+            <span class="project-team" data-i18n="rgb.team">Proyek Kelompok: Aldo, Dean, Sybil</span>
+          </div>
+          <h3 class="project-title" data-i18n="rgb.title">
+            Interactive RGB Extraction Tool: Ekstraksi Fitur Warna Citra Kucing Berbasis Python & Matplotlib
+          </h3>
+          <p class="project-summary" data-i18n="rgb.summary">
+            Tool interaktif untuk analisis pemrosesan citra digital dan ekstraksi fitur warna (RGB channels). Memungkinkan inspeksi nilai matriks piksel, navigasi multicitra, dekomposisi kanal Red, Green, Blue, dan visualisasi distribusi spektrum warna untuk pra-pemrosesan model computer vision.
+          </p>
+        </div>
+
+        <!-- Interactive RGB Live Moment -->
+        <div class="interactive-moment rgb-tool-container">
+          <div class="rgb-tool-header">
+            <div class="sample-selector">
+              <span class="selector-label" data-i18n="rgb.selectSample">Pilih Sampel Citra:</span>
+              <div class="sample-btn-group">
+                <button class="sample-btn active" data-sample="0" type="button">Tabby Orange</button>
+                <button class="sample-btn" data-sample="1" type="button">Calico Forest</button>
+                <button class="sample-btn" data-sample="2" type="button">Silver Siamese</button>
+              </div>
+            </div>
+
+            <div class="channel-toggle-group">
+              <span class="selector-label" data-i18n="rgb.channelFilter">Filter Kanal:</span>
+              <button class="channel-btn active" data-channel="all" type="button">RGB Penuh</button>
+              <button class="channel-btn red" data-channel="r" type="button">Kanal R</button>
+              <button class="channel-btn green" data-channel="g" type="button">Kanal G</button>
+              <button class="channel-btn blue" data-channel="b" type="button">Kanal B</button>
+            </div>
+          </div>
+
+          <div class="rgb-workspace-grid">
+            <!-- Canvas Viewer with interactive cursor -->
+            <div class="rgb-viewport-card">
+              <div class="viewport-header">
+                <span class="viewport-title" data-i18n="rgb.canvasTitle">Kanvas Inspeksi Piksel (Arahkan atau Klik Kursor)</span>
+                <span class="coords-display" id="coords-text">X: 120, Y: 140</span>
+              </div>
+              <div class="canvas-wrapper">
+                <canvas id="rgb-canvas" width="340" height="240" aria-label="Kanvas Sampel Citra Kucing"></canvas>
+                <div id="pixel-crosshair" class="crosshair"></div>
+              </div>
+              <div class="viewport-note" data-i18n="rgb.canvasHelp">
+                Klik titik mana saja pada citra untuk membaca vektor nilai warna [R, G, B] dan koordinat matriksnya.
+              </div>
+            </div>
+
+            <!-- Real-time Extracted Readings -->
+            <div class="rgb-inspector-card">
+              <div class="inspector-header">
+                <span class="inspector-title" data-i18n="rgb.inspectorTitle">Hasil Ekstraksi Nilai Warna</span>
+                <div class="color-preview-box" id="color-preview-box" title="Warna Piksel Terpilih"></div>
+              </div>
+
+              <!-- RGB Numerical Channel Bars -->
+              <div class="channel-meters">
+                <div class="meter-row red">
+                  <span class="meter-label">Red (R)</span>
+                  <div class="meter-bar-track">
+                    <div class="meter-bar-fill" id="meter-r-fill" style="width: 82%;"></div>
+                  </div>
+                  <span class="meter-val" id="meter-r-val">210</span>
+                </div>
+                <div class="meter-row green">
+                  <span class="meter-label">Green (G)</span>
+                  <div class="meter-bar-track">
+                    <div class="meter-bar-fill" id="meter-g-fill" style="width: 58%;"></div>
+                  </div>
+                  <span class="meter-val" id="meter-g-val">148</span>
+                </div>
+                <div class="meter-row blue">
+                  <span class="meter-label">Blue (B)</span>
+                  <div class="meter-bar-track">
+                    <div class="meter-bar-fill" id="meter-b-fill" style="width: 38%;"></div>
+                  </div>
+                  <span class="meter-val" id="meter-b-val">98</span>
+                </div>
+              </div>
+
+              <!-- Color Space Hex & Normalized Values -->
+              <div class="color-codes-grid">
+                <div class="code-box">
+                  <span class="code-label">Format Hex</span>
+                  <span class="code-val" id="code-hex">#D29462</span>
+                </div>
+                <div class="code-box">
+                  <span class="code-label">Normalized [0 - 1.0]</span>
+                  <span class="code-val" id="code-norm">[0.82, 0.58, 0.38]</span>
+                </div>
+              </div>
+
+              <!-- Mini Histogram -->
+              <div class="mini-histogram-container">
+                <span class="hist-label" data-i18n="rgb.histTitle">Histogram Distribusi Spektrum Citra Aktif:</span>
+                <canvas id="rgb-histogram" width="340" height="90" aria-label="Histogram Distribusi Warna"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Python Snippet Preview corresponding to Aldo's actual tool -->
+          <div class="code-snippet-box">
+            <div class="snippet-header">
+              <span class="snippet-lang">Python · Matplotlib & NumPy Logic</span>
+              <button class="copy-snippet-btn" id="copy-py-btn" type="button" data-i18n="common.copyCode">Salin Kode</button>
+            </div>
+            <pre class="snippet-pre"><code><span class="c1"># Logika ekstraksi fitur RGB & visualisasi interaktif per gambar</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">extract_rgb_profile</span><span class="p">(</span><span class="n">img_array</span><span class="p">,</span> <span class="n">coord_x</span><span class="p">,</span> <span class="n">coord_y</span><span class="p">):</span>
+    <span class="sd">"""Ekstraksi intensitas piksel kanal R, G, B pada titik kursor."""</span>
+    <span class="n">pixel_val</span> <span class="o">=</span> <span class="n">img_array</span><span class="p">[</span><span class="n">coord_y</span><span class="p">,</span> <span class="n">coord_x</span><span class="p">,</span> <span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">r_channel</span><span class="p">,</span> <span class="n">g_channel</span><span class="p">,</span> <span class="n">b_channel</span> <span class="o">=</span> <span class="n">pixel_val</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s1">'R'</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">r_channel</span><span class="p">),</span> <span class="s1">'G'</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">g_channel</span><span class="p">),</span> <span class="s1">'B'</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">b_channel</span><span class="p">)}</span></code></pre>
+          </div>
+        </div>
+
+        <div class="project-footer">
+          <div class="tag-list">
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Image Processing</span>
+            <span class="tag">RGB Feature Extraction</span>
+            <span class="tag">Python</span>
+            <span class="tag">Matplotlib</span>
+            <span class="tag">NumPy</span>
+          </div>
+          <span class="team-credit" data-i18n="rgb.teamCredit">Kolaborasi: Aldo, Dean, Sybil</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- Supporting Engineering Projects Section -->
+    <section id="engineering" class="section-container">
+      <div class="section-intro">
+        <div class="section-tag" data-i18n="other.tag">Pengembangan Software</div>
+        <h2 class="section-title" data-i18n="other.title">Full-Stack & Deployment</h2>
+        <p class="section-desc" data-i18n="other.desc">
+          Selain machine learning dan pemodelan, saya membangun aplikasi web produksi dengan arsitektur modern dan pipeline deployment cloud.
+        </p>
+      </div>
+
+      <div class="engineering-card">
+        <div class="eng-card-left">
+          <div class="eng-badge">Full-Stack Platform · Live di Vercel</div>
+          <h3 class="eng-title">NitipIn / Titipin</h3>
+          <p class="eng-summary" data-i18n="other.titipinSummary">
+            Platform jasa titip end-to-end dengan antarmuka responsif dan arsitektur backend terpisah. Dibangun untuk memfasilitasi transaksi penitipan barang secara transparan antara requester dan traveler.
+          </p>
+
+          <div class="feature-bullets">
+            <div class="bullet-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span data-i18n="other.f1">Landing page teroptimasi dengan alur penawaran barang</span>
+            </div>
+            <div class="bullet-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span data-i18n="other.f2">Dashboard interaktif untuk pelacakan status pesanan pengguna</span>
+            </div>
+            <div class="bullet-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span data-i18n="other.f3">Panel kontrol admin untuk moderasi katalog dan transaksi</span>
+            </div>
+          </div>
+
+          <div class="tag-list">
+            <span class="tag">React SPA</span>
+            <span class="tag">Node.js / Express</span>
+            <span class="tag">MongoDB Atlas</span>
+            <span class="tag">REST API</span>
+            <span class="tag">Vercel Deployment</span>
+          </div>
+        </div>
+
+        <div class="eng-card-right">
+          <div class="arch-box">
+            <div class="arch-head">
+              <span class="arch-title" data-i18n="other.archTitle">Arsitektur Sistem</span>
+              <span class="arch-status">Deployed</span>
+            </div>
+            <div class="arch-nodes">
+              <div class="arch-node">
+                <span class="node-layer">Frontend Client</span>
+                <span class="node-tech">React SPA · Vercel Edge</span>
+              </div>
+              <div class="arch-connector">↓ REST JSON</div>
+              <div class="arch-node">
+                <span class="node-layer">Backend Services</span>
+                <span class="node-tech">Express.js API Router</span>
+              </div>
+              <div class="arch-connector">↓ Mongoose ODM</div>
+              <div class="arch-node">
+                <span class="node-layer">Data Persistence</span>
+                <span class="node-tech">MongoDB Cloud Cluster</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="section-container">
+      <div class="section-intro">
+        <div class="section-tag" data-i18n="skills.tag">Kemampuan Teknis</div>
+        <h2 class="section-title" data-i18n="skills.title">Keahlian & Penguasaan Tools</h2>
+        <p class="section-desc" data-i18n="skills.desc">
+          Teknologi dan metodologi yang saya gunakan secara reguler dalam riset, eksperimen komputasi, dan rekayasa perangkat lunak.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Group 1: Machine Learning & Modeling -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-icon-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m4.93 4.93 4.24 4.24"></path>
+                <path d="m14.83 9.17 4.24-4.24"></path>
+                <path d="m14.83 14.83 4.24 4.24"></path>
+                <path d="m9.17 14.83-4.24 4.24"></path>
+              </svg>
+            </div>
+            <h3 class="skill-cat-title" data-i18n="skills.cat1">Machine Learning & Modeling</h3>
+          </div>
+          <ul class="skill-items-list">
+            <li>
+              <span class="item-name">Time Series Forecasting</span>
+              <span class="item-desc" data-i18n="skills.tsDesc">Dekomposisi tren-musiman, transformasi skala log</span>
+            </li>
+            <li>
+              <span class="item-name">Simulasi Monte Carlo</span>
+              <span class="item-desc" data-i18n="skills.mcDesc">Residual bootstrap stokastik, interval P5–P50–P95</span>
+            </li>
+            <li>
+              <span class="item-name">Random Number Generators</span>
+              <span class="item-desc" data-i18n="skills.lcgDesc">Implementasi LCG (Linear Congruential Generator)</span>
+            </li>
+            <li>
+              <span class="item-name">Evaluasi & Validasi Model</span>
+              <span class="item-desc" data-i18n="skills.valDesc">Rolling-origin cross-validation, metrik MAPE & RMSE</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Group 2: Computer Vision & Python -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-icon-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+                <circle cx="9" cy="9" r="2"></circle>
+                <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path>
+              </svg>
+            </div>
+            <h3 class="skill-cat-title" data-i18n="skills.cat2">Computer Vision & Data Science</h3>
+          </div>
+          <ul class="skill-items-list">
+            <li>
+              <span class="item-name">Python</span>
+              <span class="item-desc" data-i18n="skills.pyDesc">Bahasa utama untuk riset komputasi dan pemrosesan data</span>
+            </li>
+            <li>
+              <span class="item-name">Computer Vision Dasar</span>
+              <span class="item-desc" data-i18n="skills.cvDesc">Ekstraksi fitur warna RGB, manipulasi matriks citra</span>
+            </li>
+            <li>
+              <span class="item-name">Matplotlib & NumPy</span>
+              <span class="item-desc" data-i18n="skills.plotDesc">Visualisasi data interaktif, kalkulasi array multi-dimensi</span>
+            </li>
+            <li>
+              <span class="item-name">Penulisan Paper Ilmiah</span>
+              <span class="item-desc" data-i18n="skills.paperDesc">Struktur laporan berkala jurnal, dokumentasi metodologi</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Group 3: Web & Deployment -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-icon-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="skill-cat-title" data-i18n="skills.cat3">Web & Engineering Pendukung</h3>
+          </div>
+          <ul class="skill-items-list">
+            <li>
+              <span class="item-name">React SPA</span>
+              <span class="item-desc" data-i18n="skills.reactDesc">Antarmuka interaktif, manajemen state dan komponen modular</span>
+            </li>
+            <li>
+              <span class="item-name">Express & Node.js</span>
+              <span class="item-desc" data-i18n="skills.nodeDesc">Penyusunan endpoint REST API dan integrasi middleware</span>
+            </li>
+            <li>
+              <span class="item-name">MongoDB & Mongoose</span>
+              <span class="item-desc" data-i18n="skills.mongoDesc">Desain skema dokumen NoSQL dan persistensi data cloud</span>
+            </li>
+            <li>
+              <span class="item-name">Git & Deployment Vercel</span>
+              <span class="item-desc" data-i18n="skills.deployDesc">Kontrol versi kolaboratif, hosting produksi edge</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Academic Background Section -->
+    <section id="about" class="section-container">
+      <div class="about-grid">
+        <div class="about-main">
+          <div class="section-tag" data-i18n="about.tag">Profil & Latar Belakang</div>
+          <h2 class="section-title" data-i18n="about.title">Fokus pada Solusi Nyata dan Pemodelan Terukur</h2>
+          <div class="about-paragraphs">
+            <p data-i18n="about.p1">
+              Saya Aldo, mahasiswa program studi Ilmu Komputer di Universitas Negeri Medan (UNIMED). Lahir dan tumbuh di Kabupaten Samosir, Sumatera Utara, saya membawa dedikasi dan kerja keras putra daerah dalam mendalami dunia ilmu sains komputasi.
+            </p>
+            <p data-i18n="about.p2">
+              Dalam pendekatan kerja, saya menyukai komunikasi yang langsung, to-the-point, dan santai namun tetap terikat pada standar profesionalitas. Ketika mengkaji masalah Machine Learning atau peramalan data, saya lebih menitikberatkan pada validitas data, ketahanan metodologi (seperti cross-validation ketat), dan kode yang dapat diuji kembali.
+            </p>
+            <p data-i18n="about.p3">
+              Selain riset akademis, saya juga menikmati membangun perangkat lunak full-stack yang berfungsi nyata bagi pengguna. Portofolio ini mendokumentasikan dedikasi saya untuk terus berkontribusi di bidang rekayasa cerdas dan sains data.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-facts-card">
+          <h3 class="facts-title" data-i18n="about.factsTitle">Informasi Akademik</h3>
+          <dl class="facts-list">
+            <div class="fact-row">
+              <dt data-i18n="about.factName">Nama Lengkap</dt>
+              <dd>Aldo Simbolon</dd>
+            </div>
+            <div class="fact-row">
+              <dt data-i18n="about.factOrigin">Asal Daerah</dt>
+              <dd>Kabupaten Samosir, Sumatera Utara</dd>
+            </div>
+            <div class="fact-row">
+              <dt data-i18n="about.factCampus">Kampus</dt>
+              <dd>Universitas Negeri Medan (UNIMED)</dd>
+            </div>
+            <div class="fact-row">
+              <dt data-i18n="about.factClass">Program / Kelas</dt>
+              <dd>Ilmu Komputer</dd>
+            </div>
+            <div class="fact-row">
+              <dt data-i18n="about.factInterests">Minat Utama</dt>
+              <dd>Machine Learning, Time Series, Computer Vision</dd>
+            </div>
+            <div class="fact-row">
+              <dt data-i18n="about.factLanguages">Bahasa</dt>
+              <dd>Indonesia (Utama), English (Teknis)</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Direct Links Section -->
+    <section id="contact" class="section-container">
+      <div class="contact-card">
+        <div class="contact-header">
+          <div class="section-tag" data-i18n="contact.tag">Mari Terhubung</div>
+          <h2 class="contact-title" data-i18n="contact.title">Siap untuk Kolaborasi dan Diskusi Teknis</h2>
+          <p class="contact-desc" data-i18n="contact.desc">
+            Tertarik berdiskusi tentang proyek Machine Learning, simulasi data, atau peluang kolaborasi? Silakan hubungi saya melalui jalur di bawah.
+          </p>
+        </div>
+
+        <div class="contact-links-grid">
+          <!-- Email Box -->
+          <div class="contact-link-box email-box">
+            <div class="contact-link-header">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span class="box-label">Email Kontak</span>
+            </div>
+            <div class="email-value-row">
+              <a href="mailto:aldosimbolon017@gmail.com" class="email-address">aldosimbolon017@gmail.com</a>
+              <button id="copy-email-btn" class="copy-pill-btn" type="button" aria-label="Salin email">
+                <span id="copy-text" data-i18n="common.copy">Salin</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- GitHub Link -->
+          <a href="https://github.com/aldosimbolon" target="_blank" rel="noopener noreferrer" class="contact-link-box external-link-box">
+            <div class="contact-link-header">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+              </svg>
+              <span class="box-label">GitHub Repository</span>
+            </div>
+            <div class="external-url-row">
+              <span>github.com/aldosimbolon</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 17 17 7M7 7h10v10"></path>
+              </svg>
+            </div>
+          </a>
+
+          <!-- LinkedIn Link -->
+          <a href="https://linkedin.com/in/aldo-simbolon" target="_blank" rel="noopener noreferrer" class="contact-link-box external-link-box">
+            <div class="contact-link-header">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect width="4" height="12" x="2" y="9"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              <span class="box-label">LinkedIn Profil</span>
+            </div>
+            <div class="external-url-row">
+              <span>linkedin.com/in/aldo-simbolon</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 17 17 7M7 7h10v10"></path>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Quiet Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="footer-copy">© 2026 Aldo Simbolon · Ilmu Komputer UNIMED</span>
+        <span class="footer-origin">Medan, Sumatera Utara</span>
+      </div>
+      <div class="footer-right">
+        <span class="craft-note">Made with insanity</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Detail Paper Kualanamu -->
+  <div id="kno-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-kno-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <span class="modal-badge">Abstrak & Spesifikasi Paper</span>
+          <h3 id="modal-kno-title" class="modal-title">Paper Riset Penumpang Internasional Bandara Kualanamu 2026</h3>
+        </div>
+        <button id="close-kno-modal" class="modal-close-btn" type="button" aria-label="Tutup jendela">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-content">
+        <div class="paper-meta-table">
+          <div class="meta-row">
+            <span class="meta-label">Judul Paper:</span>
+            <span class="meta-value">Prediksi & Cross-Validation Penumpang Internasional Bandara Kualanamu Tahun 2026 Menggunakan LCG dan Simulasi Monte Carlo Menggunakan Data Bulanan 2024–2025</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Penyusun:</span>
+            <span class="meta-value">Kelompok 2</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Dosen Pembimbing:</span>
+            <span class="meta-value">Ichwanul Muslim Karo Karo, M.Kom., Ph.D.</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Dokumen Sumber:</span>
+            <span class="meta-value mono-code">Paper.docx</span>
+          </div>
+        </div>
+
+        <h4 class="modal-subhead">Ringkasan Metodologi</h4>
+        <ol class="modal-steps-list">
+          <li>
+            <strong>Pembersihan dan Agregasi Data:</strong> Data bulanan penumpang internasional Kualanamu (2024–2025) diagregasi dari total kedatangan, keberangkatan, dan transit.
+          </li>
+          <li>
+            <strong>Transformasi Logaritmik:</strong> Nilai penumpang ditransformasikan ke skala log untuk menstabilkan varians dan menangkap pola pertumbuhan musiman yang bersifat multiplikatif.
+          </li>
+          <li>
+            <strong>Generator Kongruensial Linier (LCG):</strong> Mengimplementasikan LCG mandiri untuk membangkitkan bilangan seragam acak <code class="mono-code">U ~ [0, 1)</code> tanpa ketergantungan library bawaan, memastikan transparansi periodisitas.
+          </li>
+          <li>
+            <strong>Residual Bootstrap Monte Carlo:</strong> Nilai residual historis di-sampling ulang ribuan kali untuk membentuk distribusi kemungkinan peramalan di setiap bulan tahun 2026.
+          </li>
+          <li>
+            <strong>Penyajian Persentil Risiko:</strong> Hasil tidak berupa satu angka tunggal (point estimate) melainkan rentang interval P5 (skenario pesimis), P50 (skenario median/tren tengah), dan P95 (skenario lonjakan penumpang).
+          </li>
+          <li>
+            <strong>Rolling-Origin CV:</strong> Evaluasi ketepatan model diuji dengan skema rolling window untuk mengukur generalisasi dan mencegah overfitting historis.
+          </li>
+        </ol>
+      </div>
+
+      <div class="modal-footer">
+        <button id="modal-done-btn" class="btn-primary" type="button">Tutup Informasi</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
