@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Portofolio Machine Learning, Pemodelan Stokastik, dan Computer Vision - Aldo (UNIMED PSIK-24A)",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "npx serve ."
   },
   "keywords": [
     "portfolio",
